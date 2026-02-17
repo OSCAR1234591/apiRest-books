@@ -1,0 +1,22 @@
+package org.company.books.backend.response;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class ResponseRest {
+
+    private ArrayList<HashMap<String,String>> metaData=new ArrayList<>();
+
+    public ArrayList<HashMap<String,String>> getMetaData(){
+        return metaData;
+    }
+
+    public void setMetaData(String tipo,String codigo,String date){
+        HashMap<String,String> mapa =new HashMap<String,String>();
+        mapa.put("tipo", tipo);
+        mapa.put("codigo", codigo);
+        mapa.put("date", date);
+
+        metaData.add(mapa);
+    }
+}
